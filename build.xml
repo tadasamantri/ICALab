@@ -1,0 +1,43 @@
+<project default="compile" name="Build file for decompiled code">
+	<description>
+  This is the build file produced by Dava for the decompiled code.
+  New features like (formatting using jalopy etc) will be added to this build file
+</description>
+<!-- properties for project directories -->
+<property name="srcDir" location="src"/>
+<property name="classesDir" location="classes"/>
+	<!--  ========== Compile Target ================= -->
+	<target name="compile" description="Compile .java files">
+	<javac srcdir="${srcDir}" destdir="${classesDir}">
+	  <classpath>
+		 <pathelement location="${junitJar}"/>
+	  </classpath>
+	 </javac>
+	</target>
+	<!--  ==========AST METRICS FOR DECOMPILED CODE================= -->
+<target name="ast-metrics" description="Compute the ast metrics">
+   <exec executable="java" dir="src">
+		<arg value="-Xmx400m" />
+		<arg value="soot.Main" />
+		<arg value="-ast-metrics" />
+		<arg value="--src-prec" />
+		<arg value="java" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\SnakeView$RefreshHandler" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\SnakeView$Coordinate" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\R$drawable" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\R$string" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\Snake" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\R$id" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\SnakeView" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\R$attr" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\R$styleable" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\R$layout" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\TileView" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\BackgroundView" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\BuildConfig" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\R$color" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\Snake$1" />
+		<arg value="sootOutput\dava\src\com\example\android\snake\R" />
+	  </exec>
+	</target>
+</project>

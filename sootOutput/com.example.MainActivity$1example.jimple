@@ -1,0 +1,23 @@
+class com.example.MainActivity$1example extends java.lang.Object
+{
+    int ex1;
+    java.lang.String ex2;
+    boolean ex3;
+    final com.example.MainActivity this$0;
+
+    void <init>(com.example.MainActivity)
+    {
+        com.example.MainActivity$1example $r0;
+        com.example.MainActivity $r1;
+
+        $r0 := @this: com.example.MainActivity$1example;
+
+        $r1 := @parameter0: com.example.MainActivity;
+
+        $r0.<com.example.MainActivity$1example: com.example.MainActivity this$0> = $r1;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

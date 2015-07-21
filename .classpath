@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/vasco"/>
+	<classpathentry kind="src" path="/ICASheet4Solution"/>
+	<classpathentry kind="lib" path="C:/Users/Tadasa/Downloads/axml-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tadasa/Downloads/soot-infoflow-android.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tadasa/Downloads/soot-infoflow.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tadasa/Downloads/soot.jar"/>
+	<classpathentry kind="lib" path="C:/Study/Semester3/ICA/android.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

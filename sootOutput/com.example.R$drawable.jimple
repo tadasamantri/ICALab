@@ -1,0 +1,22 @@
+public final class com.example.R$drawable extends java.lang.Object
+{
+    public static final int icon;
+
+    public void <init>()
+    {
+        com.example.R$drawable $r0;
+
+        $r0 := @this: com.example.R$drawable;
+
+        specialinvoke $r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void <clinit>()
+    {
+        <com.example.R$drawable: int icon> = 2130837504;
+
+        return;
+    }
+}

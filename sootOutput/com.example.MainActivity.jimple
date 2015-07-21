@@ -1,0 +1,487 @@
+public class com.example.MainActivity extends android.app.Activity
+{
+    int a;
+    int p;
+
+    public void <init>()
+    {
+        com.example.MainActivity $r0;
+
+        $r0 := @this: com.example.MainActivity;
+
+        specialinvoke $r0.<android.app.Activity: void <init>()>();
+
+        return;
+    }
+
+    public void call_func(int)
+    {
+        com.example.MainActivity $r0;
+        int $i0;
+        android.widget.Toast $r1;
+
+        $r0 := @this: com.example.MainActivity;
+
+        $i0 := @parameter0: int;
+
+        $r1 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "again call", 0);
+
+        virtualinvoke $r1.<android.widget.Toast: void show()>();
+
+     label1:
+        return;
+
+        $r1 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "again not call", 0);
+
+        virtualinvoke $r1.<android.widget.Toast: void show()>();
+
+        goto label1;
+    }
+
+    void call_function(int)
+    {
+        com.example.MainActivity $r0;
+        int $i0;
+        android.widget.Toast $r1;
+
+        $r0 := @this: com.example.MainActivity;
+
+        $i0 := @parameter0: int;
+
+        $r1 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "inter 1 print", 0);
+
+        virtualinvoke $r1.<android.widget.Toast: void show()>();
+
+     label1:
+        return;
+
+        $r1 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "inter 1 not print", 0);
+
+        virtualinvoke $r1.<android.widget.Toast: void show()>();
+
+        goto label1;
+    }
+
+    int function1(int)
+    {
+        com.example.MainActivity $r0;
+        int $i0;
+
+        $r0 := @this: com.example.MainActivity;
+
+        $i0 := @parameter0: int;
+
+        $i0 = $i0 + 5;
+
+        return $i0;
+    }
+
+    int getP(int)
+    {
+        com.example.MainActivity $r0;
+        int $i0;
+
+        $r0 := @this: com.example.MainActivity;
+
+        $i0 := @parameter0: int;
+
+        $i0 = $i0 + -3;
+
+        return $i0;
+    }
+
+    int getQ()
+    {
+        com.example.MainActivity $r0;
+
+        $r0 := @this: com.example.MainActivity;
+
+        return 5;
+    }
+
+    public void onCreate(android.os.Bundle)
+    {
+        com.example.MainActivity $r0;
+        android.os.Bundle $r1;
+        java.util.Date $r2;
+        java.lang.Exception $r3;
+        int $i0, $i1;
+        com.example.MainActivity$1example $r4;
+        android.widget.TextView $r5;
+        double $d0;
+        byte $b2;
+        android.widget.Toast $r6;
+        java.lang.Class[] $r7;
+        java.lang.Class $r8;
+        java.lang.reflect.Method $r9;
+        java.lang.Object[] $r10;
+        long $l3;
+        java.lang.String $r11;
+        boolean $z0;
+
+        $r0 := @this: com.example.MainActivity;
+
+        $r1 := @parameter0: android.os.Bundle;
+
+        specialinvoke $r0.<android.app.Activity: void onCreate(android.os.Bundle)>($r1);
+
+        $r5 = new android.widget.TextView;
+
+        specialinvoke $r5.<android.widget.TextView: void <init>(android.content.Context)>($r0);
+
+        virtualinvoke $r5.<android.widget.TextView: void setText(java.lang.CharSequence)>("Hello World!");
+
+        virtualinvoke $r0.<com.example.MainActivity: void setA(int)>(5);
+
+        $i1 = virtualinvoke $r0.<com.example.MainActivity: int function1(int)>(5);
+
+        virtualinvoke $r0.<com.example.MainActivity: void call_func(int)>(5);
+
+        virtualinvoke $r0.<com.example.MainActivity: void call_func(int)>(-5);
+
+        $d0 = staticinvoke <java.lang.Math: double random()>();
+
+        $b2 = $d0 cmpl 5.15;
+
+        if $b2 != 0 goto label21;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "double print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label01:
+        goto label22;
+
+     label02:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "and print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label03:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        goto label23;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "and print1", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label04:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        goto label24;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "and print2", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label05:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        goto label25;
+
+        goto label25;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "and print3", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label06:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        goto label26;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "or print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label07:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        goto label08;
+
+        goto label27;
+
+     label08:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "or print1", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label09:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        goto label10;
+
+     label10:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "or print2", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label11:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "or print3", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label12:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        $b2 = $d0 cmpl 5.15;
+
+        if $b2 != 0 goto label28;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "double and int print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label13:
+        $i0 = virtualinvoke $r0.<com.example.MainActivity: int getQ()>();
+
+        $i0 = virtualinvoke $r0.<com.example.MainActivity: int getP(int)>($i0);
+
+        $r0.<com.example.MainActivity: int p> = $i0;
+
+        $i0 = $r0.<com.example.MainActivity: int p>;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "interprocedure print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label14:
+        $r7 = newarray (java.lang.Class)[0];
+
+        $r8 = class "com/example/MainActivity";
+
+        $r9 = virtualinvoke $r8.<java.lang.Class: java.lang.reflect.Method getMethod(java.lang.String,java.lang.Class[])>("getList", $r7);
+
+        $r10 = newarray (java.lang.Object)[0];
+
+        virtualinvoke $r9.<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>(null, $r10);
+
+     label15:
+        $i0 = $r0.<com.example.MainActivity: int a>;
+
+        goto label30;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "not and print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label16:
+        $i1 = 0 + 3;
+
+        virtualinvoke $r0.<com.example.MainActivity: void call_function(int)>($i1);
+
+        $i0 = 0;
+
+        $i1 = 0;
+
+     label17:
+        if $i0 < 6 goto label31;
+
+        $r2 = new java.util.Date;
+
+        specialinvoke $r2.<java.util.Date: void <init>()>();
+
+        $l3 = virtualinvoke $r2.<java.util.Date: long getTime()>();
+
+        $b2 = $l3 cmp 67868L;
+
+        if $b2 != 0 goto label33;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "time print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label18:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "nested print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label34;
+
+     label19:
+        $r4 = new com.example.MainActivity$1example;
+
+        specialinvoke $r4.<com.example.MainActivity$1example: void <init>(com.example.MainActivity)>($r0);
+
+        $r4.<com.example.MainActivity$1example: int ex1> = 0;
+
+        $r4.<com.example.MainActivity$1example: java.lang.String ex2> = "Hello";
+
+        $r4.<com.example.MainActivity$1example: boolean ex3> = 1;
+
+        $i1 = $r4.<com.example.MainActivity$1example: int ex1>;
+
+        $r11 = $r4.<com.example.MainActivity$1example: java.lang.String ex2>;
+
+        $z0 = virtualinvoke $r11.<java.lang.String: boolean equals(java.lang.Object)>("Hello");
+
+        if $z0 == 0 goto label35;
+
+        $z0 = $r4.<com.example.MainActivity$1example: boolean ex3>;
+
+        if $z0 == 0 goto label35;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "Object print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label20:
+        virtualinvoke $r0.<com.example.MainActivity: void setContentView(android.view.View)>($r5);
+
+        return;
+
+     label21:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "double not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label01;
+
+     label22:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "boolean not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label02;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "and not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label03;
+
+     label23:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "and not print1", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label04;
+
+     label24:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "and not print2", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label05;
+
+     label25:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "and not print3", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label06;
+
+     label26:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "or not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label07;
+
+     label27:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "or not print1", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label09;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "or not print2", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label11;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "or not print3", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label12;
+
+     label28:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "double and int not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label13;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "interprocedure not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label14;
+
+     label29:
+        $r3 := @caughtexception;
+
+        virtualinvoke $r3.<java.lang.Exception: void printStackTrace()>();
+
+        goto label15;
+
+     label30:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "not and not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label16;
+
+     label31:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "for print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+     label32:
+        $i0 = $i0 + 1;
+
+        $i1 = $i1 + 1;
+
+        goto label17;
+
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "for not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label32;
+
+     label33:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "time not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label18;
+
+     label34:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, " nested print second", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label19;
+
+     label35:
+        $r6 = staticinvoke <android.widget.Toast: android.widget.Toast makeText(android.content.Context,java.lang.CharSequence,int)>($r0, "Object not print", 0);
+
+        virtualinvoke $r6.<android.widget.Toast: void show()>();
+
+        goto label20;
+
+        catch java.lang.Exception from label14 to label15 with label29;
+    }
+
+    public void setA(int)
+    {
+        com.example.MainActivity $r0;
+        int $i0;
+
+        $r0 := @this: com.example.MainActivity;
+
+        $i0 := @parameter0: int;
+
+        $r0.<com.example.MainActivity: int a> = $i0;
+
+        return;
+    }
+}
